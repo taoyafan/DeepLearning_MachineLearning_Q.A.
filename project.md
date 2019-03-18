@@ -77,7 +77,7 @@ Ubuntu，python3，tensorflow，OpenAI Gym，mujoco
 
 ### 角色
 
-3人，实际上是两人，独立完成
+3人，实际上是两人，分别独立完成
 
 ### 技术细节
 

@@ -217,16 +217,16 @@ $$
 
 ### BatchNorm 和 LayerNorm 的区别
 
-（1）BN 相当于把一个 batch 的一个 channel 的所有数据当做一组特征，将这组特征进行 normalization，特征组数和 channel 的个数相同。在训练的时候保存计算的均值和方差，在测试时使用。
+（1）BN 相当于把一个 batch 的一个 channel 的所有数据当做一组特征，将这组特征进行 normalization，特征组数和 channel 的个数相同，相当于均值方差的个数是和特征的组数相同。在训练的时候保存计算的均值和方差，在测试时使用。
 
 ​	BN 的缺点：
 
 + 对 batch size 的大小比较敏感，如果 batch size 太小，计算的均值和方差不足以代表整个数据分布。
 + 对固定长度的网络方便，但是对 RNN 这种长度不固定的网络计算很麻烦。
 
-（2）
+（2）LN 是针对每个样本的所有特征进行 normalization，得到的均值方差个数和 batch size 相同。具体参考下图，其中 H、W 为图像的高和宽，C为 channel，N 为 batch size。
 
-
+![图片](./img/BN_LN.png)
 
 参考：[博客](https://blog.csdn.net/liuxiao214/article/details/81037416)
 
